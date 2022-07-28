@@ -12,6 +12,8 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "no-undef": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off"
   }
 }
