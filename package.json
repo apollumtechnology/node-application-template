@@ -1,0 +1,32 @@
+{
+  "name": "node-application-template",
+  "version": "1.0.0",
+  "description": "A template for Node applications with Clean Architecture and VSCode settings",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "test": "jest --passWithNoTests --no-cache --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollumtechnology/node-application-template.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "clean",
+    "architecture",
+    "tdd",
+    "tests",
+    "typescript",
+    "ts"
+  ],
+  "author": "Bruno Petrolini <bruno@apollum.org>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/apollumtechnology/node-application-template/issues"
+  },
+  "homepage": "https://github.com/apollumtechnology/node-application-template#readme"
+}
