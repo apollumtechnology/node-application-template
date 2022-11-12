@@ -1,6 +1,6 @@
 {
   "name": "node-application-template",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A template for Node applications with Clean Architecture and VSCode settings",
   "main": "index.js",
   "engines": {
