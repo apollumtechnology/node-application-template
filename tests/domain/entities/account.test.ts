@@ -64,6 +64,10 @@ describe('Account Entity', () => {
     expect(sut).toBeInstanceOf(Account);
   });
 
+  it('should create a account entity with correct values', () => {
+    expect(sut).toEqual(entityInit);
+  });
+
   it('should return the public schema', () => {
     const publicSchema = sut.toPublic();
 
