@@ -1,50 +1,8 @@
-type AccountPublic = {
-  firstName: string;
-  lastName: string;
-  birthDate: string;
-  email: string;
-}
-
-type AccountData = {
-  firstName: string;
-  lastName: string;
-  birthDate: string;
-  email: string;
-  password: string;
-}
-
-class Account {
-  private firstName: string;
-
-  private lastName: string;
-
-  private birthDate: string;
-
-  private email: string;
-
-  private password: string;
-
-  constructor(init: AccountData) {
-    this.firstName = init.firstName;
-    this.lastName = init.lastName;
-    this.birthDate = init.birthDate;
-    this.email = init.email;
-    this.password = init.password;
-  }
-
-  public toPublic(): AccountPublic {
-    return {
-      firstName: this.firstName,
-      lastName: this.lastName,
-      birthDate: this.birthDate,
-      email: this.email,
-    };
-  }
-}
+import { Account } from '@/domain/entities';
 
 describe('Account Entity', () => {
   let sut: Account;
-  let entityInit: AccountData;
+  let entityInit: Account.AccountData;
 
   beforeAll(() => {
     entityInit = {
