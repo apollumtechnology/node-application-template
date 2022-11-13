@@ -1,3 +1,10 @@
+type AccountPublic = {
+  firstName: string;
+  lastName: string;
+  birthDate: string;
+  email: string;
+}
+
 type AccountData = {
   firstName: string;
   lastName: string;
@@ -24,6 +31,15 @@ class Account {
     this.email = init.email;
     this.password = init.password;
   }
+
+  public toPublic(): AccountPublic {
+    return {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      birthDate: this.birthDate,
+      email: this.email,
+    };
+  }
 }
 
 describe('Account Entity', () => {
@@ -43,5 +59,13 @@ describe('Account Entity', () => {
     const sut = new Account(entityInit);
 
     expect(sut).toBeInstanceOf(Account);
+  });
+
+  it('should return the public schema', () => {
+    const sut = new Account(entityInit);
+
+    const publicSchema = sut.toPublic();
+
+    expect(publicSchema).not.toHaveProperty('password');
   });
 });
