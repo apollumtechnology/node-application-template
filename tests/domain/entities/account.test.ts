@@ -14,13 +14,13 @@ type AccountData = {
 }
 
 class Account {
-  public firstName: string;
+  private firstName: string;
 
-  public lastName: string;
+  private lastName: string;
 
-  public birthDate: string;
+  private birthDate: string;
 
-  public email: string;
+  private email: string;
 
   private password: string;
 
