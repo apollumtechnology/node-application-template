@@ -43,6 +43,7 @@ class Account {
 }
 
 describe('Account Entity', () => {
+  let sut: Account;
   let entityInit: AccountData;
 
   beforeAll(() => {
@@ -55,15 +56,15 @@ describe('Account Entity', () => {
     };
   });
 
-  it('should create an entity instance with success', () => {
-    const sut = new Account(entityInit);
+  beforeEach(() => {
+    sut = new Account(entityInit);
+  });
 
+  it('should create an entity instance with success', () => {
     expect(sut).toBeInstanceOf(Account);
   });
 
   it('should return the public schema', () => {
-    const sut = new Account(entityInit);
-
     const publicSchema = sut.toPublic();
 
     expect(publicSchema).not.toHaveProperty('password');
